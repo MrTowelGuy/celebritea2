@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %} {% block content %}
+<h1>Did you spill too much?</h1>
+
+<h4>
+  Are you sure you want to clean the
+  <span class="teal-text">"{{ object.title }}"</span> tea?
+</h4>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Im afraid of getting sued" class="btn" />
+  <a href="{% url 'detail' tea.id %}">Cancel</a>
+</form>
+{% endblock %}
