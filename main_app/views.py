@@ -23,3 +23,4 @@ def teas_detail(request, tea_id):
 class TeaCreate(CreateView):
   model = Tea
   fields = ['title', 'type', 'description', 'witnesses']
+  success_url = '/teas/'
