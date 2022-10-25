@@ -14,6 +14,10 @@
     <h6>Only <strong>{{ tea.witnesses }}</strong> people witnessed this?</h6>
     {% endif %}
   </div>
+  <div class="card-action">
+    <a href="{% url 'teas_update' tea.id %}">Edit</a>
+    <a href="{% url 'teas_delete' tea.id %}">Delete</a>
+  </div>
 </div>
 
 {% endblock %}

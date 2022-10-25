@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Tea
 
 def home(request):
@@ -23,4 +23,13 @@ def teas_detail(request, tea_id):
 class TeaCreate(CreateView):
   model = Tea
   fields = ['title', 'type', 'description', 'witnesses']
+  success_url = '/teas/'
+
+
+class TeaUpdate(UpdateView):
+  model = Tea
+  fields = ['title', 'description', 'witnesses']
+
+class TeaDelete(DeleteView):
+  model = Tea
   success_url = '/teas/'
