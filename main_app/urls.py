@@ -14,4 +14,5 @@ urlpatterns = [
   path('celebs/create/', views.CelebCreate.as_view(), name='celebs_create'),
   path('celebs/<int:pk>/update/', views.CelebUpdate.as_view(), name='celebs_update'),
   path('celebs/<int:pk>/delete/', views.CelebDelete.as_view(), name='celebs_delete'),
+  path('teas/<int:tea_id>/add_sighting/', views.add_sighting, name='add_feeding'),
 ]
