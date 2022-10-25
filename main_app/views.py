@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Tea
+from main_app.models import Tea, Celeb
 
 def home(request):
-    return HttpResponse('<h1>Hello /ᐠ｡‸｡ᐟﾉ</h1>')
+    return render(request, 'home.html')
 
 def about(request):
     return render(request, 'about.html')
@@ -33,3 +33,25 @@ class TeaUpdate(UpdateView):
 class TeaDelete(DeleteView):
   model = Tea
   success_url = '/teas/'
+
+def celebs_index(request):
+    celebs = Celeb.objects.all()
+    return render(request, 'celebs/index.html', {'celebs': celebs})
+
+def celebs_detail(request, celeb_id):
+  celeb = Celeb.objects.get(id=celeb_id)
+  return render(request, 'celebs/detail.html', { 'celeb': celeb })
+
+class CelebCreate(CreateView):
+  model = Celeb
+  fields = ['name', 'description']
+  success_url = '/celebs/'
+
+
+class CelebUpdate(UpdateView):
+  model = Celeb
+  fields = ['name','description']
+
+class CelebDelete(DeleteView):
+  model = Celeb
+  success_url = '/celebs/'

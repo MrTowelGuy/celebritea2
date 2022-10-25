@@ -1,17 +1,17 @@
-<!-- {% extends 'base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
 
 <h1>My Celeb List</h1>
-{% for celeb in object_list %}
+{% for celeb in celebs %}
 <div class="card">
-    <a href="{% url 'celebs_detail' celeb.id %}">
+    <a href="/celebs/{{ celeb.id }}">
         <div class="card-content">
-            <span class="card-title">A <span class="{{ celeb.description }}-text"></span> {{ celeb.name }}</span>
+            <span class="card-title">A {{ celeb.description }} {{ celeb.name }}</span>
         </div>
     </a>
 </div>
 {% endfor %}
 
 
-{% endblock %} -->
+{% endblock %}

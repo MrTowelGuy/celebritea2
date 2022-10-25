@@ -1,4 +1,4 @@
-<!-- {% extends 'base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
 
@@ -6,15 +6,13 @@
 
 
 <div class="card">
-    <a href="{% url 'celebs_detail' celeb.id %}">
         <div class="card-content">
-            <span class="card-title">A <span class="{{ celeb.description.lower }}-text">{{ toy.color }}</span> {{ celeb.name }}</span>
+            <span class="card-title">A {{celeb.description}} {{ celeb.name }}</span>
         </div>
         <div class="card-action">
             <a href="{% url 'celebs_update' celeb.id %}">Edit</a>
-            <a href="{% url 'celebss_delete' celeb.id %}">Delete</a>
+            <a href="{% url 'celebs_delete' celeb.id %}">Delete</a>
         </div>
-    </a>
 </div>
 
-{% endblock %} -->
+{% endblock %}

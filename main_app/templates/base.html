@@ -20,8 +20,17 @@
           </ul>
           <ul class="right">
             <li><a href="{% url 'about' %}">About</a></li>
+            <!-- ADD CURLY BRACES BACK IN WHEN READY -->
+            <!-- % if user.is_authenticated % -->
             <li><a href="{% url 'teas_create' %}">Spill Some Tea</a></li>
-            <li><a href="{% url 'index' %}">Spilt Tea</a></li>
+            <li><a href="/teas">Spilt Tea</a></li>
+            <li><a href="{% url 'celebs_create' %}">Add a Celebrity</a></li>
+            <li><a href="/celebs">View All Celebrities</a></li>
+            <!-- <li><a href="% url 'logout' %">Log Out</a></li> -->
+            <!-- % else %
+            <li></li>
+            <li></li>
+            % endif % -->
           </ul>
         </div>
       </nav>
