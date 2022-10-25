@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.http import HttpResponse
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from main_app.models import Tea, Celeb
@@ -17,18 +17,18 @@ def teas_index(request):
     return render(request, 'teas/index.html', { 'teas': teas})
 
 def teas_detail(request, tea_id):
-  tea = Tea.objects.get(id=tea_id)
-  sighting_form = SightingForm()
-  return render(request, 'teas/detail.html', {
-     'tea': tea, 'sighting_form':sighting_form })
+    tea = Tea.objects.get(id=tea_id)
+    sighting_form = SightingForm()
+    return render(request, 'teas/detail.html', {
+        'tea': tea, 'sighting_form':sighting_form })
 
 def add_sighting(request, tea_id):
-  form = SightingForm(request.POST)
-  if form.is_valid():
-    new_sighting = form.save(commit=False)
-    new_sighting.tea_id = tea_id
-    new_sighting.save()
-  return redirect('detail', tea_id=tea_id)
+    form = SightingForm(request.POST)
+    if form.is_valid():
+        new_sighting = form.save(commit=False)
+        new_sighting.tea_id = tea_id
+        new_sighting.save()
+    return redirect('detail', tea_id=tea_id)
 
 
 class TeaCreate(CreateView):

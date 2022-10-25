@@ -35,6 +35,9 @@ class Sighting(models.Model):
   def __str__(self):
     return f"{self.get_time_display()} on {self.date}"
 
+  class Meta:
+    ordering=['-date']
+
 class Celeb(models.Model):
     name= models.CharField(max_length=50)
     description= models.CharField(max_length=20)
