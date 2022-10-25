@@ -24,8 +24,8 @@ class Tea(models.Model):
         return reverse('detail', kwargs={'tea_id': self.id})
 
 class Sighting(models.Model):
-  date = models.DateField()
-  time = models.CharField(
+  date = models.DateField('Sighting Date')
+  time = models.CharField('Time of day',
     max_length=1,
     choices=TIME,
     default=TIME[0][0]
