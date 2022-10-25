@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from main_app.models import Tea, Celeb
+from main_app.forms import SightingForm
 
 def home(request):
     return render(request, 'home.html')
@@ -17,7 +18,9 @@ def teas_index(request):
 
 def teas_detail(request, tea_id):
   tea = Tea.objects.get(id=tea_id)
-  return render(request, 'teas/detail.html', { 'tea': tea })
+  sighting_form = SightingForm()
+  return render(request, 'teas/detail.html', {
+     'tea': tea, 'sighting_form':sighting_form })
 
 
 class TeaCreate(CreateView):
