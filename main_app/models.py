@@ -3,6 +3,14 @@ from django.urls import reverse
 
 # Create your models here.
 
+TIME = (
+    ('D','Dawn'),
+    ('N','Noon'),
+    ('A','Afternoon'),
+    ('E','Evening'),
+    ('L','Latenight')
+)
+
 class Tea(models.Model):
     title = models.CharField(max_length=255)
     type = models.CharField(max_length=255)
@@ -15,6 +23,17 @@ class Tea(models.Model):
     def get_absolute_url(self):
         return reverse('detail', kwargs={'tea_id': self.id})
 
+class Sighting(models.Model):
+  date = models.DateField()
+  time = models.CharField(
+    max_length=1,
+    choices=TIME,
+    default=TIME[0][0]
+  )
+  tea = models.ForeignKey(Tea, on_delete=models.CASCADE)
+
+  def __str__(self):
+    return f"{self.get_time_display()} on {self.date}"
 
 class Celeb(models.Model):
     name= models.CharField(max_length=50)
