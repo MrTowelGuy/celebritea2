@@ -2,6 +2,14 @@ from django.db import models
 from django.urls import reverse
 
 # Create your models here.
+# class Celeb(models.Model):
+#     name= models.CharField(max_length=50)
+#     description= models.CharField(max_length=20)
+
+#     def get_absolute_url(self):
+#         return reverse('detail', kwargs={'celeb_id': self.id})
+
+
 class Tea(models.Model):
     title = models.CharField(max_length=255)
     type = models.CharField(max_length=255)
@@ -13,3 +21,4 @@ class Tea(models.Model):
     
     def get_absolute_url(self):
         return reverse('detail', kwargs={'tea_id': self.id})
+
