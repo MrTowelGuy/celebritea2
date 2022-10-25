@@ -14,6 +14,6 @@ def teas_index(request):
     teas = Tea.objects.all()
     return render(request, 'teas/index.html', { 'teas': teas})
 
-def teas_detail(request, cat_id):
-  tea = Tea.objects.get(id=cat_id)
+def teas_detail(request, tea_id):
+  tea = Tea.objects.get(id=tea_id)
   return render(request, 'teas/detail.html', { 'tea': tea })
