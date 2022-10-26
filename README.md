@@ -37,6 +37,9 @@ There is always more to come in the future, but this app served a fun purpose of
 -Add a madlibs scenario generator
 -Add comments and likes
 -Have popular posts populate a home page
+-Show the most popular rumors populate on the celebrities detail pages
+-Add a profile page w profile pictures etc
+
 
 
 
