@@ -11,6 +11,12 @@ def about(request):
     return render(request, 'about.html')
 
 
+def assoc_celeb(request, tea_id, celeb_id):
+  # Note that you can pass a toy's id instead of the whole object
+  Tea.objects.get(id=tea_id).celebs.add(celeb_id)
+  return redirect('detail', tea_id=tea_id)
+
+
 # Add new view
 def teas_index(request):
     teas = Tea.objects.all()

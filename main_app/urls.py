@@ -15,4 +15,6 @@ urlpatterns = [
   path('celebs/create/', views.CelebCreate.as_view(), name='celebs_create'),
   path('celebs/<int:pk>/update/', views.CelebUpdate.as_view(), name='celebs_update'),
   path('celebs/<int:pk>/delete/', views.CelebDelete.as_view(), name='celebs_delete'),
+  path('teas/<int:tea_id>/add_sighting/', views.add_sighting, name='add_sighting'),
+  path('teas/<int:tea_id>/assoc_celeb/<int:celeb_id>/', views.assoc_celeb, name='assoc_celeb'),
 ]
