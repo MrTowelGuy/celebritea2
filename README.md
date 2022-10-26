@@ -35,6 +35,9 @@ There is always more to come in the future, but this app served a fun purpose of
 #### Future Plans
 -Add crazy amounts of styling
 -Add a madlibs scenario generator
+-Add comments and likes
+-Have popular posts populate a home page
+
 
 
 [Back To The Top](#read-me-template)
