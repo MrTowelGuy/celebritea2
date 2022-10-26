@@ -94,6 +94,7 @@ class CelebCreate(LoginRequiredMixin, CreateView):
 class CelebUpdate(LoginRequiredMixin, UpdateView):
   model = Celeb
   fields = ['name','description']
+  success_url = '/celebs/'
 
 class CelebDelete(LoginRequiredMixin, DeleteView):
   model = Celeb
