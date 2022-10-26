@@ -39,6 +39,8 @@ There is always more to come in the future, but this app served a fun purpose of
 -Have popular posts populate a home page
 -Show the most popular rumors populate on the celebrities detail pages
 -Add a profile page w profile pictures etc
+-Add a popularity points system gained from making decent posts!
+-Add location tracking functionality to show posts from your area
 
 
 
