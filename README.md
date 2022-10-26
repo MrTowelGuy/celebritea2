@@ -1,7 +1,7 @@
-# WELCOME TO CELEBRITEA!
+# WELCOME TO [CELEBRITEA](https://celebritea.herokuapp.com/)!
 
 ![CelebriTea.](https://i.imgur.com/H4yuAe4.png)
-![CelebriTea.](https://i.imgur.com/F01rAYj.png)
+
 ![CelebriTea.](https://i.imgur.com/OWJEH5M.png)
 ![CelebriTea.](https://i.imgur.com/7yI0Un7.png)
 
