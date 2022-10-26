@@ -1,5 +1,11 @@
 # WELCOME TO [CELEBRITEA](https://celebritea.herokuapp.com/)!
 
+---
+
+## Description
+
+There is always more to come in the future, but this app served a fun purpose of creatin a satirical website based around making a fun madlibs-like experience about our favorite celebrities!
+
 ![CelebriTea.](https://i.imgur.com/H4yuAe4.png)
 
 ![CelebriTea.](https://i.imgur.com/OWJEH5M.png)
@@ -15,11 +21,7 @@
 - [Future Plans](#future-plans)
 
 
----
 
-## Description
-
-There is always more to come in the future, but this app served a fun purpose of creatin a satirical website based around making a fun madlibs-like experience about our favorite celebrities!
 
 #### Technologies
 
