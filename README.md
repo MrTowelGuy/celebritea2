@@ -41,6 +41,8 @@ There is always more to come in the future, but this app served a fun purpose of
 -Add a profile page w profile pictures etc
 -Add a popularity points system gained from making decent posts!
 -Add location tracking functionality to show posts from your area
+-Add an image uploader for each scenario
+-Add ai art generator
 
 
 
