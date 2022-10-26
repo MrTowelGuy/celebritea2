@@ -11,7 +11,8 @@
 ### Table of Contents
 
 - [Description](#description)
-- [How To Use](#how-to-use)
+- [Technologies)(#technologies)
+- [Future Plans](#future-plans)
 
 
 ---
@@ -30,6 +31,11 @@ There is always more to come in the future, but this app served a fun purpose of
 - HTML
 - Materialize CSS
 - and markdown, ofcourse!
+
+#### Future Plans
+-Add crazy amounts of styling
+-Add a madlibs scenario generator
+
 
 [Back To The Top](#read-me-template)
 
