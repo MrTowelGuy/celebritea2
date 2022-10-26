@@ -12,11 +12,12 @@
   </head>
   <body>
     <header class="navbar-fixed">
-      <nav>
-        <div class="nav-extended">
+      <nav class="grey darken-4">
+        <div class="nav-wrapper">
+          <div class="container">
           <ul>
             <li>
-              <a href="/" class="left brand-logo">  CelebriTea</a>
+              <a href="/" class="left brand-logo"> <img class="logoimage" src="../static/images/CELEBLOGO.png"> </a>
             </li>
           </ul>
           <ul class="right">
@@ -33,15 +34,18 @@
             <li><a href="{% url 'login' %}">Log In</a></li>
             {% endif %}
           </ul>
+          </div>
         </div>
       </nav>
     </header>
     <main class="container">{% block content %} {% endblock %}</main>
-    <footer class="page-footer">
+    <footer class="page-footer grey darken-4">
+      <div class="container">
       <div class="left">
       </div>
-      <div class="right">
-        All Rights Reserved, © 2022 CELEBRITEA 
+      <div class="center">
+        <img class='footlogo' src="../static/images/Screen Shot 2022-10-26 at 12.01.56 AM.png"> 
+      </div>
       </div>
     </footer>
   </body>

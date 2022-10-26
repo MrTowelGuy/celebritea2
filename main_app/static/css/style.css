@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 body {
     display: flex;
     min-height: 100vh;
@@ -12,4 +14,17 @@ body {
     padding-top: 0;
     text-align: right;
   }
-  
+
+.logoimage{
+  max-width: 150px !important;
+  /* height: auto !important; */
+}
+
+.footlogo{
+  max-width: 200px;
+  padding-bottom: 10px;
+}
+
+.homebody{
+  background-color: rgb(40, 40, 40);
+}
