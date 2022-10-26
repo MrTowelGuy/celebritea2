@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<h1>My Celeb List</h1>
+<img src="../static/images/CELEBLOGO.png">
+<hr />
+<h1 class="celeblistheader">My Celeb List</h1>
 {% for celeb in celebs %}
 <div class="card">
-    <a href="/celebs/{{ celeb.id }}">
+    <a class="text" href="/celebs/{{ celeb.id }}">
         <div class="card-content">
             <span class="card-title">A {{ celeb.description }} {{ celeb.name }}</span>
         </div>

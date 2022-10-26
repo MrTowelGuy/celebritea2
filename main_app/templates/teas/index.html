@@ -1,10 +1,13 @@
+
 {% extends 'base.html' %} {% block content %}
 
-<h1>All the Tea!</h1>
+<img src="../static/images/CELEBLOGO.png">
+<hr />
+<h1 class="celeblistheader">My Reportings!</h1>
 
 {% for tea in teas %}
 <div class="card">
-<a href="/teas/{{ tea.id }}">
+<a class="teatextindex"href="/teas/{{ tea.id }}">
   <div class="card-content">
     <span class="card-title">{{ tea.title}}</span>
     <h5><strong>First Impression...</strong> {{ tea.type }}</h5>
