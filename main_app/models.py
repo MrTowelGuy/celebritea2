@@ -10,12 +10,22 @@ TIME = (
     ('E','Evening'),
     ('L','Latenight')
 )
+class Celeb(models.Model):
+    name= models.CharField(max_length=50)
+    description= models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('celebs_detail', kwargs={'pk': self.id})
 
 class Tea(models.Model):
     title = models.CharField(max_length=255)
     type = models.CharField(max_length=255)
     description = models.TextField(max_length=1000)
     witnesses = models.IntegerField()
+    celebs = models.ManyToManyField(Celeb)
 
     def __str__(self):
         return self.title
@@ -35,15 +45,5 @@ class Sighting(models.Model):
   def __str__(self):
     return f"{self.get_time_display()} on {self.date}"
 
-  class Meta:
-    ordering=['-date']
-
-class Celeb(models.Model):
-    name= models.CharField(max_length=50)
-    description= models.CharField(max_length=20)
-
-    def __str__(self):
-        return self.title
-
-    def get_absolute_url(self):
-        return reverse('detail', kwargs={'celeb_id': self.id})
+#   class Meta:
+#     ordering=['-date']

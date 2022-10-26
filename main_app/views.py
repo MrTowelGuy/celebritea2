@@ -18,9 +18,12 @@ def teas_index(request):
 
 def teas_detail(request, tea_id):
     tea = Tea.objects.get(id=tea_id)
+    celebs_tea_doesnt_have = Celeb.objects.exclude(id__in = tea.celebs.all().values_list('id'))
     sighting_form = SightingForm()
     return render(request, 'teas/detail.html', {
-        'tea': tea, 'sighting_form':sighting_form })
+        'tea': tea, 'sighting_form':sighting_form, 
+        'celebs': celebs_tea_doesnt_have
+        })
 
 def add_sighting(request, tea_id):
     form = SightingForm(request.POST)
