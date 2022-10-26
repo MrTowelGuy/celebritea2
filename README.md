@@ -28,6 +28,7 @@ There is always more to come in the future, but this app served a fun purpose of
 - HEROKU
 - PSQL
 - HTML
+- Materialize CSS
 - and markdown, ofcourse!
 
 [Back To The Top](#read-me-template)
