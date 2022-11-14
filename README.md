@@ -58,7 +58,3 @@ There is always more to come in the future, but this app served a fun purpose of
 [Back To The Top](#read-me-template)
 
 ---
-
-## How To Use
-
-Make a new post! add an avatar AVI! add your favorite manga panel! tell us about the manga!
